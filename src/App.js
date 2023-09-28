@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import data from './PeriodicTableJSON.json';
+import { useEffect, useState } from 'react';
+import Element from './Element.js';
 
 function App() {
+  const [objectData, setPeriodicTableObject] = useState(null);
+
+  useEffect(() => {
+    const jsonAsObject = data.elements;
+    setPeriodicTableObject(jsonAsObject);
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="app">
+      <p id='heading'>Periodic Table</p>
+      <div className='container'>
+        <div className='all-elements'>
+          {
+            objectData ? objectData.map((item) => {
+              if (item.number < 58 || (item.number > 71 && item.number < 90) || item.number > 103) {
+                return (<Element id={item.name} properties={item} />);
+              }
+              else {
+                return null;
+              }
+            })
+              : null
+          }
+        </div>
+
+        <div className='seperate-elements'>
+          {
+            objectData ? objectData.map((item) => {
+              if ((item.number >= 58 && item.number <= 71) || (item.number >= 90 && item.number <= 103)) {
+                return (<Element id={item.name} properties={item} />);
+              }
+              else {
+                return null;
+              }
+            })
+              : null
+          }
+        </div>
+      </div>
+    </div >
+
   );
 }
 

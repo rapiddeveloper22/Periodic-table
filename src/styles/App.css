@@ -1,0 +1,93 @@
+.app {
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 3vh;
+  padding: 3px;
+}
+
+.all-elements {
+  display: grid;
+  grid-template-columns: repeat(18, 0fr);
+  grid-gap: 0;
+}
+
+#Hydrogen {
+  grid-column-start: 1;
+  grid-column-end: 18;
+  border-left-style: solid;
+  border-top-style: solid;
+}
+
+#Helium,
+#Lithium,
+#Sodium,
+#Boron,
+#Aluminium,
+#Potassium,
+#Rubidium,
+#Cesium,
+#Francium,
+#Cerium,
+#Thorium {
+  border-left-style: solid;
+}
+
+#Helium,
+#Boron,
+#Nitrogen,
+#Carbon,
+#Oxygen,
+#Fluorine,
+#Neon,
+#Scandium,
+#Titanium,
+#Vanadium,
+#Chromium,
+#Manganese,
+#Iron,
+#Cobalt,
+#Nickel,
+#Copper,
+#Zinc,
+#Cerium,
+#Praseodymium,
+#Neodymium,
+#Promethium,
+#Samarium,
+#Europium,
+#Gadolinium,
+#Terbium,
+#Dysprosium,
+#Holmium,
+#Erbium,
+#Thulium,
+#Ytterbium,
+#Lutetium {
+  border-top-style: solid;
+}
+
+#Beryllium {
+  grid-column-start: 2;
+  grid-column-end: 13;
+}
+
+#Magnesium {
+  grid-column-start: 2;
+  grid-column-end: 13;
+}
+
+.seperate-elements {
+  display: grid;
+  grid-template-columns: repeat(14, 0fr);
+  grid-gap: 0;
+  margin: 4vh 10vw;
+}
+
+#heading {
+  font-size: 3em;
+}

@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    /* display: flex; */
+}
+
+.element-container {
+    height: 9vh;
+    width: 5vw;
+    background-color: aqua;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    /* float: left; */
+    /* margin: 50px; */
+}
+
+.symbol p {
+    font-size: 200%;
+    text-align: center;
+}
+
+.elementName p {
+    font-size: 0.8em;
+    text-align: left;
+}
+
+.number {
+    text-align: right;
+    margin-right: 10%;
+}
+
+.elementName {
+    /* background-color: blue; */
+}
+
+.symbol {
+    background-color: yellow;
+}
